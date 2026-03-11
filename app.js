@@ -15,8 +15,8 @@ app.get("/", function(req, res) {
     // Render the landing page
     return res.render("index");
 });
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-    console.log('Press Ctrl+C to stop.');
+// Initialize Server Listener
+app.listen(PORT, function() {
+    console.log("Application is live at port: " + PORT);
+    console.log("Press Ctrl+C to terminate process.");
 });
