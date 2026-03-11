@@ -10,11 +10,11 @@ app.set("views", path.join(__dirname, "views"));
 // Static Asset Delivery Middleware
 app.use(express.static(path.join(__dirname, "public")));
 
-// Routes
-app.get('/', (req, res) => {
-    res.render('index');
+// Application Routes Setup
+app.get("/", function(req, res) {
+    // Render the landing page
+    return res.render("index");
 });
-
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
