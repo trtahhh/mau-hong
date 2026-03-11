@@ -1,8 +1,8 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const PORT = process.env.PORT || 3000;
-
+const express = require("express");
+const path = require("path");
+const app = express(); // Express app instance
+const PORT = 3000 || process.env.PORT;
+// Core dependencies loaded
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
